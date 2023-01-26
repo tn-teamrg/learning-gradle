@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+version = '1.0.0'
+
+java {
+	sourceCompatibility JavaVersion.VERSION_1_8
+	targetCompatibility JavaVersion.VERSION_1_8
+}
+
+application {
+    mainClass = 'com.example.gradle.calculator.Main'
+}
+
+javadoc {
+    // * NOTE: https://docs.gradle.org/current/javadoc/org/gradle/external/javadoc/StandardJavadocDocletOptions.html
+    options.header = 'Calculator'
+    // * NOTE: https://docs.gradle.org/current/javadoc/org/gradle/external/javadoc/CoreJavadocOptions.html#verbose--
+    options.verbose()
+}

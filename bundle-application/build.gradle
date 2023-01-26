@@ -1,0 +1,27 @@
+plugins {
+	id 'java'
+	id 'application'
+}
+
+version = '1.0.0'
+
+task HelloGradleTask{
+	println 'hello gradle task!'
+}
+
+java {
+	sourceCompatibility JavaVersion.VERSION_1_8
+	targetCompatibility JavaVersion.VERSION_1_8
+}
+
+compileJava{
+	options.compilerArgs << '-Werror'
+}
+
+jar {
+	archiveBaseName = 'calculator'
+}
+
+application{
+	mainClass= 'com.example.gradle.calculator.Main'
+}
